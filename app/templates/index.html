@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{%block content%}
+        <h1><strong>Be aware, not paranoid.</strong></h1>
+        <p><em>Social media promised us a global village, but instead, it delivered a million tiny islands of outrage, each one more isolated than the last.</em></p>
+        <p>
+        <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                {{ form.username.label }}<br>
+                {{ form.username(size=20) }}<br>
+                {{ form.password.label }}<br>
+                {{ form.password(size=20) }}<br>
+                {{ form.remember_me() }} {{ form.remember_me.label }}<br>
+                {{ form.submit() }}
+
+        </form>
+        </p>
+{% endblock %}
