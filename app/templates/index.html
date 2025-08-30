@@ -6,10 +6,20 @@
         <p>
         <form action="" method="post" novalidate>
                 {{ form.hidden_tag() }}
+                <p>
                 {{ form.username.label }}<br>
                 {{ form.username(size=20) }}<br>
+                {% for i in form.username.errors %}
+                <span style="color: red">[{{ i }}]</span>
+                {% endfor %}
+                </p>
+                <p>
                 {{ form.password.label }}<br>
                 {{ form.password(size=20) }}<br>
+                {% for i in form.username.errors %}
+                <span style="color: red">[{{ i }}]</span>
+                {% endfor %}
+                </p>
                 {{ form.remember_me() }} {{ form.remember_me.label }}<br>
                 {{ form.submit() }}
         </form>

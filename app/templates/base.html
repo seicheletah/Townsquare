@@ -3,7 +3,7 @@
         <title>{{title}}</title>
     </head>
     <body>
-        <a href="/">Home</a> <a href="/">About</a> <a href="/">Contact</a>
+        <a href="{{ url_for('index') }}">Home</a> <a href="{{ url_for('index') }}">About</a> <a href="{{ url_for('index') }}">Contact</a>
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}

@@ -3,7 +3,7 @@ from app import townsquare
 from app.forms import LoginForm
 
 @townsquare.route('/', methods=['GET', 'POST'])
-
+@townsquare.route('/index', methods=['GET', 'POST'])
 def index():
     form = LoginForm()
     if form.validate_on_submit():
